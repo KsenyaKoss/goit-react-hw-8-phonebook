@@ -1,9 +1,12 @@
 import { UserMenu } from 'components/UserMenu/UserMenu';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { selectIsLoggedIn } from 'redux/selectors';
 
 export const Navigation = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn)
   return (
-    <nav>
+    <header>
       <div>
         <NavLink to="/">Home</NavLink>
         <NavLink to="contacts">Contacts</NavLink>
@@ -13,9 +16,10 @@ export const Navigation = () => {
         <NavLink to="register">Register Form</NavLink>
         <NavLink to="login">Login</NavLink>
       </div>
-      <div>
+     {  isLoggedIn &&  <div>
         <UserMenu />
       </div>
-    </nav>
+      }
+    </header>
   );
 };
