@@ -7,7 +7,7 @@ import {
 import { selectFilteredContacts, selectIsLoading } from 'redux/selectors';
 import { AddContactForm } from './AddForm';
 import { FilterContacts } from './FilterContacts';
-import { Box, Button, Divider, Flex, Heading, Spinner } from '@chakra-ui/react';
+import { Box, Button, Divider, Flex, Heading, IconButton, Spinner } from '@chakra-ui/react';
 
 export const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -58,7 +58,7 @@ export const Contacts = () => {
                   mb="10px"
                 >
                   <p>
-                    {index + 1}.{name} ==== {number}
+                    {index + 1}.{name}  {number}
                   </p>
                   <Button
                     type="button"
