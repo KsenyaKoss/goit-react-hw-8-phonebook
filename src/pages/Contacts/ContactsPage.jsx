@@ -7,7 +7,7 @@ import {
 import { selectFilteredContacts, selectIsLoading } from 'redux/selectors';
 import { AddContactForm } from './AddForm';
 import { FilterContacts } from './FilterContacts';
-import { Box, Button, Divider, Flex, Heading, IconButton, Spinner } from '@chakra-ui/react';
+import { Box, Button, Divider, Flex, Heading,  Spinner } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
 
 export const Contacts = () => {
