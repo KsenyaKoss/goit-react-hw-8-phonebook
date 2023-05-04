@@ -1,3 +1,4 @@
+import { Box, Button, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/Auth/authOperations';
@@ -30,24 +31,38 @@ export const LoginForm = () => {
    setPassword('')
   }
 
-
   return (
-    <>
-      <h2>Login Form</h2>
-
+  
+    <Box  as='div'
+    bg="#B794F4"
+    w='50%'
+    p={4}
+    m='auto'
+    mt='50px'
+    color="white"
+    fontWeight="semibold"
+    letterSpacing="wide"
+    fontSize="xxl"
+    borderWidth="1px"
+    borderRadius="lg" >
+      
+      <Heading size='xl' color='white' >Login Form</Heading>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">
+      <FormControl  >
+        <FormLabel >
         Email
-          <input type="text" name="email" placeholder='Email...' value={email} onChange={handleChange}/>
-        </label>
+          <Input type="text" name="email" placeholder='Email...' value={email} onChange={handleChange}/>
+        </FormLabel>
         <br />
-        <label htmlFor="">
+        <FormLabel >
           Password
-          <input type="text" name="password" placeholder='Password...' value={password} onChange={handleChange} />
-        </label>
+          <Input type="text" name="password" placeholder='Password...' value={password} onChange={handleChange} />
+        </FormLabel>
         <br />
-        <button>Sign in</button>
+        <Button  type='submit'  colorScheme='purple.500' variant='outline'  mx="auto">Sign in</Button>
+      </FormControl>
       </form>
-    </>
+    </Box>
+   
   );
 };
