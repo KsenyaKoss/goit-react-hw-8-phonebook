@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://KsenyaKoss/goit-react-hw-8-phonebook/",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.10.8",
     "@reduxjs/toolkit": "^1.9.5",
