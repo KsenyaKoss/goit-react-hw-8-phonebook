@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { RegisterForm } from '../pages/Register/RegisterPage';
 import { LoginForm } from '../pages/Login/LoginPage';
 import { Contacts } from '../pages/Contacts/ContactsPage';
@@ -34,6 +34,7 @@ export const App = () => {
           <LoginForm />
         </PublicRoute>} />
       </Route>
+      <Route path='*' element={<Navigate to='/contacts'/>}/>
     </Routes>
     </ChakraProvider>
   );
