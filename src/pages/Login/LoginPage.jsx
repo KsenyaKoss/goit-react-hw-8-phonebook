@@ -59,7 +59,7 @@ export const LoginForm = () => {
           <Input type="text" name="password" placeholder='Password...' value={password} onChange={handleChange} />
         </FormLabel>
         <br />
-        <Button  type='submit'  colorScheme='purple.500' variant='outline'  mx="auto">Sign in</Button>
+        <Button  type='submit'  colorScheme='purple' variant='outline'  mx="auto">Sign in</Button>
       </FormControl>
       </form>
     </Box>

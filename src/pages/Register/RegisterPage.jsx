@@ -97,7 +97,7 @@ export const RegisterForm = () => {
             />
           </FormLabel>
           <br />
-          <Button  type='submit'  colorScheme="purple.500" variant="outline" isDisabled={!name || !email || !password} >
+          <Button  type='submit'  colorScheme="purple" variant="outline" isDisabled={!name || !email || !password} >
             Registration
           </Button>
         </FormControl>

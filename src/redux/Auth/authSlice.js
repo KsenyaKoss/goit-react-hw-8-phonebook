@@ -16,7 +16,7 @@ const authSlice = createSlice ({
     initialState,
     extraReducers: {
         [registrationThunk.fulfilled]: (state, {payload}) => {
-            state.user = payload
+            state.user = payload.user
             state.token = payload.token
             state.isLoggedIn = true
             state.isLoading = false

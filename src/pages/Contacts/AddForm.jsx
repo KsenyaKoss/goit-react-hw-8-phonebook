@@ -59,7 +59,7 @@ export const AddContactForm = () => {
             number
             <Input type="text" name="number" value={number} onChange={handleInputChange}/>
           </FormLabel>
-          <Button type="submit" colorScheme='purple.500' variant='outline'  mx="auto" isDisabled={!name || !number}>Add Contact</Button>
+          <Button type="submit" colorScheme='purple' variant='outline'  mx="auto" isDisabled={!name || !number}>Add Contact</Button>
         </FormControl>
         </form>
       </Box> 

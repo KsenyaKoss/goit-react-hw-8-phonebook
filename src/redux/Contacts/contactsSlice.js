@@ -1,11 +1,11 @@
 import { logoutThunk } from 'redux/Auth/authOperations';
 
-const { createSlice } = require('@reduxjs/toolkit');
-const {
+import  { createSlice } from "@reduxjs/toolkit";
+import {
   fetchContacts,
   addContact,
   deleteContact,
-} = require('./contactsOperations');
+} from './contactsOperations';
 
 const initialState = {
   contacts: {
@@ -21,6 +21,7 @@ const contactsSlice = createSlice({
   initialState,
   reducer: {
     setFilter(state, { payload }) {
+        console.log(payload);
       state.filter = payload;
       console.log(state.filter);
     },

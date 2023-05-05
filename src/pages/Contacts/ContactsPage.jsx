@@ -63,7 +63,7 @@ export const Contacts = () => {
                   </p>
                   <Button
                     type="button"
-                    colorScheme="purple.500"
+                    colorScheme="purple"
                     variant="outline"
                     onClick={() => {
                       dispatch(deleteContact(id));
