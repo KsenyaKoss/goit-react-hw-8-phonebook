@@ -19,8 +19,8 @@ const initialState = {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
-  reducer: {
-    setFilter(state, { payload }) {
+  reducers: {
+    setFilter(state, { payload }){
         console.log(payload);
       state.filter = payload;
       console.log(state.filter);
@@ -46,7 +46,7 @@ const contactsSlice = createSlice({
       state.contacts.isLoading = false;
     },
     [logoutThunk.fulfilled]: state => {
-      state.items = [];
+      state.contacts.items = [];
     },
     [fetchContacts.pending]: state => {
       state.contacts.isLoading = true;
@@ -73,4 +73,4 @@ const contactsSlice = createSlice({
 });
 
 export const contactsReducer = contactsSlice.reducer;
-export const { setFilter } = contactsSlice.actions;
+export const  {setFilter}  = contactsSlice.actions;
