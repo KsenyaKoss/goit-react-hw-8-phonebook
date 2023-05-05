@@ -21,20 +21,20 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
-        <Route path="/contacts" element={
+        <Route path="contacts" element={
         <PrivateRoute>
           <Contacts />
         </PrivateRoute>} />
-        <Route path="/register" element={
+        <Route path="register" element={
         <PublicRoute>
           <RegisterForm />
         </PublicRoute>} />
-        <Route path="/login" element={
+        <Route path="login" element={
         <PublicRoute>
           <LoginForm />
         </PublicRoute>} />
       </Route>
-      <Route path='*' element={<Navigate to='/contacts'/>}/>
+      <Route path='*' element={<Navigate to='contacts'/>}/>
     </Routes>
     </ChakraProvider>
   );
