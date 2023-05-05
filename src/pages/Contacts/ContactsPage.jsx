@@ -7,7 +7,7 @@ import {
 import { selectFilteredContacts, selectIsLoading } from 'redux/selectors';
 import { AddContactForm } from './AddForm';
 import { FilterContacts } from './FilterContacts';
-import { Box, Button, Divider, Flex, Heading,  Spinner } from '@chakra-ui/react';
+import { Box, Button, Divider, Flex, Heading,  OrderedList,  Spinner } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
 
 export const Contacts = () => {
@@ -49,12 +49,12 @@ export const Contacts = () => {
           />
         )}
         {filteredContacts.length ? (
-          <ul>
+          <OrderedList>
             {filteredContacts.map(({ name, number, id }, index) => {
               return (
                 <Flex
                   key={id}
-                  alignItems='baseline'
+                  alignItems='center'
                   justifyContent="space-between"
                   mb="10px"
                 >
@@ -74,7 +74,7 @@ export const Contacts = () => {
                 </Flex>
               );
             })}
-          </ul>
+         </OrderedList>
         ) : (
           <Heading textAlign="center" size="20px">
             Your contact list is empty
