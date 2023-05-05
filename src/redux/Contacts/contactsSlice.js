@@ -21,9 +21,7 @@ const contactsSlice = createSlice({
   initialState,
   reducers: {
     setFilter(state, { payload }){
-        console.log(payload);
       state.filter = payload;
-      console.log(state.filter);
     },
   },
   extraReducers: {
