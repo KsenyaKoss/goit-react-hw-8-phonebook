@@ -22,7 +22,7 @@ export const Navigation = () => {
       <Flex align="center" justifyContent="space-between" w="100%">
         <Flex gap={3}>
           <NavLink to="/">Home</NavLink>|
-          <NavLink to="contacts">Contacts</NavLink>
+          {isLoggedIn && <NavLink to="contacts">Contacts</NavLink>}
         </Flex>
      {isLoggedIn ? (
           <div>
